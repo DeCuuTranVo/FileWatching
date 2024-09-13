@@ -1,0 +1,5 @@
+﻿FileSystemWatcher Documentation
+https://learn.microsoft.com/en-us/dotnet/api/system.io.filesystemwatcher?view=net-8.0
+
+Log information
+https://learn.microsoft.com/en-us/answers/questions/1377949/logging-in-c-to-a-text-file
