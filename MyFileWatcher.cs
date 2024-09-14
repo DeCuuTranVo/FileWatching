@@ -10,7 +10,7 @@ namespace FileWatching
     public class MyFileWatcher : IMyFileWatcher
     {
         private string _directoryName = Path.Join(Environment.CurrentDirectory, "files");//change this to whatever you want
-        private string _logFilePath = Path.Join(Environment.CurrentDirectory, "files", "log_file.txt");
+        private string _logFilePath = Path.Join(Environment.CurrentDirectory, "log_file.txt");
 
         private string _fileFilter = string.Empty; //"*.*";
         FileSystemWatcher _fileSystemWatcher;
@@ -57,18 +57,18 @@ namespace FileWatching
             string message = e.GetException().Message;
             _logger.LogInformation($"File error event {message}");
 
-            //try
-            //{
-            //    using (StreamWriter writer = new StreamWriter(_logFilePath))
-            //    {
-            //        writer.Write(message);
-            //        writer.Flush();
-            //    }
-            //}
-            //catch (Exception exp)
-            //{
-            //    Console.Write(exp.Message);
-            //}
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(_logFilePath, append: true))
+                {
+                    writer.WriteLine(message);
+                    writer.Flush();
+                }
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
         }
 
         private void _fileSystemWatcher_Renamed(object sender, RenamedEventArgs e)
@@ -76,18 +76,18 @@ namespace FileWatching
             string message = $"File rename event for file {e.FullPath}";
             _logger.LogInformation(message);
 
-            //try
-            //{
-            //    using (StreamWriter writer = new StreamWriter(_logFilePath))
-            //    {
-            //        writer.Write(message);
-            //        writer.Flush();
-            //    }
-            //}
-            //catch (Exception exp)
-            //{
-            //    Console.Write(exp.Message);
-            //}
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(_logFilePath, append: true))
+                {
+                    writer.WriteLine(message);
+                    writer.Flush();
+                }
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
         }
 
         private void _fileSystemWatcher_Deleted(object sender, FileSystemEventArgs e)
@@ -95,18 +95,18 @@ namespace FileWatching
             string message = $"File deleted event for file {e.FullPath}";
             _logger.LogInformation(message);
 
-            //try
-            //{
-            //    using (StreamWriter writer = new StreamWriter(_logFilePath))
-            //    {
-            //        writer.Write(message);
-            //        writer.Flush();
-            //    }
-            //}
-            //catch (Exception exp)
-            //{
-            //    Console.Write(exp.Message);
-            //}
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(_logFilePath, append: true))
+                {
+                    writer.WriteLine(message);
+                    writer.Flush();
+                }
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
         }
 
         private void _fileSystemWatcher_Changed(object sender, FileSystemEventArgs e)
@@ -114,18 +114,18 @@ namespace FileWatching
             string message = $"File changed event for file {e.FullPath}";
             _logger.LogInformation(message);
 
-            //try
-            //{
-            //    using (StreamWriter writer = new StreamWriter(_logFilePath))
-            //    {
-            //        writer.Write(message);
-            //        writer.Flush();
-            //    }
-            //}
-            //catch (Exception exp)
-            //{
-            //    Console.Write(exp.Message);
-            //}
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(_logFilePath, append: true))
+                {
+                    writer.WriteLine(message);
+                    writer.Flush();
+                }
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
         }
 
         private void _fileSystemWatcher_Created(object sender, FileSystemEventArgs e)
@@ -133,18 +133,18 @@ namespace FileWatching
             string message = $"File created event for file {e.FullPath}";
             _logger.LogInformation(message);
 
-            //try
-            //{
-            //    using (StreamWriter writer = new StreamWriter(_logFilePath))
-            //    {
-            //        writer.Write(message);
-            //        writer.Flush();
-            //    }
-            //}
-            //catch (Exception exp)
-            //{
-            //    Console.Write(exp.Message);
-            //}
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(_logFilePath, append: true))
+                {
+                    writer.WriteLine(message);
+                    writer.Flush();
+                }
+            }
+            catch (Exception exp)
+            {
+                Console.Write(exp.Message);
+            }
 
             //using (var scope = _serviceProvider.CreateScope())
             //{

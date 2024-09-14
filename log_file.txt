@@ -1,1 +1,5 @@
-﻿
+File deleted event for file D:\Hoang VT\FileWatching\files\hello4.txt.txtFile created event for file D:\Hoang VT\FileWatching\files\New Text Document.txtFile rename event for file D:\Hoang VT\FileWatching\files\hello4.txt.txtFile rename event for file D:\Hoang VT\FileWatching\files\hello2.txt.txtFile changed event for file D:\Hoang VT\FileWatching\files\hello2.txt.txtFile deleted event for file D:\Hoang VT\FileWatching\files\hello2.txt.txtFile created event for file D:\Hoang VT\FileWatching\files\New Text Document.txt
+File rename event for file D:\Hoang VT\FileWatching\files\hello4.txt.txt
+File rename event for file D:\Hoang VT\FileWatching\files\hello0.txt.txt
+File changed event for file D:\Hoang VT\FileWatching\files\hello0.txt.txt
+File deleted event for file D:\Hoang VT\FileWatching\files\hello0.txt.txt
